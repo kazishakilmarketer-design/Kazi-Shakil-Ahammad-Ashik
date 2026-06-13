@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;650&family=JetBrains+Mono:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom cyber scrollbars for our HUD containers */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 209, 0.15);
+  border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 209, 0.4);
+}
+
+/* Custom animation timings for loaded sequences */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.animate-bounce1 {
+  animation: bounce-slow 1.2s infinite;
+  animation-delay: 0s;
+}
+.animate-bounce2 {
+  animation: bounce-slow 1.2s infinite;
+  animation-delay: 0.2s;
+}
+.animate-bounce3 {
+  animation: bounce-slow 1.2s infinite;
+  animation-delay: 0.4s;
+}
